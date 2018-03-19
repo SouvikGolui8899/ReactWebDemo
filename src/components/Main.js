@@ -31,7 +31,7 @@ export default class Main extends React.Component{
   }
   
   handleClick(property) {
-	const myWindow = window.open("","_blank", "toolbar=yes,scrollbars=yes,resizable=yes");
+	const myWindow = window.open();
 	const propertyType = property.type !== "" ? "<p style='font-size: 1.5em;text-align: center;'><b>Type:</b> "+property.type+"</p>":"";
 	myWindow.document.write(
 	"<p style='font-size: 1.875em'> "+property.headline+"</p>"+
@@ -47,7 +47,7 @@ export default class Main extends React.Component{
 	"</ul>"+
 	"</p>"+
 	"<p style='font-size: 1.5em'><b>Property:</b> #"+property.id+"</p>"+
-	'<a href="'+property.application_url+'">Apply</a>'
+	'<a href="'+property.application_url+'"><p style="font-size: 1.5em">Apply</p></a>'
 	);
   }
 
